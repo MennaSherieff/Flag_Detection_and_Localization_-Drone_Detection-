@@ -1,0 +1,4 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/MennaSherieff/Flag_Detection_and_Localization_-Drone_Detection-.dvc
