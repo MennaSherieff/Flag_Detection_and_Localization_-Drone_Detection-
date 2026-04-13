@@ -1,0 +1,49 @@
+schema: '2.0'
+stages:
+  investigate:
+    cmd: python flag_pipeline.py --phases 1 --dataset Country-Flags-4
+    deps:
+    - path: Country-Flags-4
+      hash: md5
+      md5: 43fa195815cfb65b58c928174c39678a.dir
+      size: 223776858
+      nfiles: 20377
+    - path: flag_pipeline.py
+      hash: md5
+      md5: df5a7d74d6546c813c76ced8a470fd39
+      size: 15187
+    params:
+      params.yaml:
+        dataset.splits:
+        - train
+        - valid
+        - test
+    outs:
+    - path: outputs/bbox_analysis.png
+      hash: md5
+      md5: 93b06a497aa4ae77d347bcb9a6e56fc0
+      size: 46322
+    - path: outputs/class_distribution.png
+      hash: md5
+      md5: f06941aedeacf9a37086c020feda4dde
+      size: 102336
+    - path: outputs/resolution_analysis.png
+      hash: md5
+      md5: c0ee789f252a723fb3ee0f8c1bac9a08
+      size: 88189
+    - path: outputs/split_counts.png
+      hash: md5
+      md5: 8098cea39bac0540ddddf36b9ee6ea59
+      size: 18725
+  clean:
+    cmd: python flag_pipeline.py --phases 2 --dataset Country-Flags-4
+    deps:
+    - path: Country-Flags-4
+      hash: md5
+      md5: 43fa195815cfb65b58c928174c39678a.dir
+      size: 223776858
+      nfiles: 20377
+    - path: flag_pipeline.py
+      hash: md5
+      md5: df5a7d74d6546c813c76ced8a470fd39
+      size: 15187

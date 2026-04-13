@@ -1,0 +1,99 @@
+names:
+- Afghanistan
+- Albania
+- Algeria Flag
+- American Samoa
+- Andorra Flag
+- Angola Flag
+- Anguilla Flag
+- Antigua and Barbuda
+- Argentina
+- Armenia
+- Australia
+- Austria
+- Bahrain
+- Belgium
+- Bolivia
+- Bosnia and Herzegovina
+- Brazil
+- Cameroon
+- Canada
+- Cape Verde
+- Chile
+- China
+- Colombia
+- Costa Rica
+- Croatia
+- Czech Republic
+- Democratic Republic of the Congo
+- Denmark
+- Ecuador
+- Egypt
+- El Salvador
+- England
+- Finland
+- France
+- Gabon
+- Georgia
+- Germany
+- Ghana
+- Greece
+- Haiti
+- Honduras
+- Hungary
+- Iceland
+- Iran
+- Iraq
+- Israel
+- Italy
+- Ivory Coast
+- Jamaica
+- Japan
+- Jordan
+- Madagascar
+- Mali
+- Mexico
+- Morocco
+- Netherlands
+- New Zealand
+- Nigeria
+- Norway
+- Panama
+- Paraguay
+- Peru
+- Poland
+- Portugal
+- Romania
+- Saudi Arabia
+- Scotland
+- Senegal
+- Serbia
+- Slovakia
+- Slovenia
+- South Africa
+- South Korea
+- Spain
+- Sweden
+- Switzerland
+- Tanzania
+- Tunisia
+- Turkey
+- Ukraine
+- United Arab Emirates
+- United States
+- Uruguay
+- Uzbekistan
+- Venezuela
+- Vietnam
+- Wales
+- Zambia
+nc: 88
+roboflow:
+  license: CC BY 4.0
+  project: country-flags-2t33e
+  url: https://universe.roboflow.com/phamdata/country-flags-2t33e/dataset/4
+  version: 4
+  workspace: phamdata
+test: ../test/images
+train: ../train/images
+val: ../valid/images

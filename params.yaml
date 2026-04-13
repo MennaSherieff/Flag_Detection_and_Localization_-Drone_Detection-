@@ -1,0 +1,23 @@
+dataset:
+  version: 4
+  workspace: phamdata
+  project: country-flags-2t33e
+  splits:
+    - train
+    - valid
+    - test
+
+preprocess:
+  resize_w: 640
+  resize_h: 640
+
+augmentation:
+  factor: 2
+  seed: 42
+
+training:
+  model: yolov8n.pt
+  epochs: 100
+  imgsz: 640
+  batch: 16
+  patience: 20

@@ -1,0 +1,37 @@
+stages:
+  investigate:
+    cmd: python flag_pipeline.py --phases 1 --dataset Country-Flags-4
+    deps:
+      - flag_pipeline.py
+      - Country-Flags-4
+    outs:
+      - outputs/split_counts.png:          {cache: false}
+      - outputs/class_distribution.png:    {cache: false}
+      - outputs/resolution_analysis.png:   {cache: false}
+      - outputs/bbox_analysis.png:         {cache: false}
+    params:
+      - params.yaml:
+          - dataset.splits
+
+  clean:
+    cmd: python flag_pipeline.py --phases 2 --dataset Country-Flags-4
+    deps:
+      - flag_pipeline.py
+      - Country-Flags-4
+
+  preprocess:
+    cmd: python flag_pipeline.py --phases 3 --dataset Country-Flags-4
+    deps:
+      - flag_pipeline.py
+      - Country-Flags-4
+    outs:
+      - processed_dataset:
+          cache: true
+          persist: true
+    params:
+      - params.yaml:
+          - preprocess.resize_w
+          - preprocess.resize_h
+    metrics:
+      - metrics/preprocess_metrics.json:
+          cache: false
